@@ -1,4 +1,4 @@
-Feature: charger
+Feature: computer
 
   Scenario: buy new computer components
      Given 100000 pesos
@@ -7,5 +7,5 @@ Feature: charger
 
   Scenario: a new computer
      Given 5 computer components
-     When I spend 2 hour matching computer components
+     When I spend 180 minutes matching computer components
      Then I will have my new computer

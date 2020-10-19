@@ -1,7 +1,6 @@
-# -- FILE: features/steps/example_steps.py
 from behave import given, when, then
 
-
+#charger feature
 @given('A charger')
 def step_impl(context):
     pass
@@ -17,6 +16,7 @@ def step_impl(context, number):
     assert context.failed is False
     assert context.tests_count >= 0
 
+#computer feature
 @given('{number:d} pesos')
 def step_impl(context, number):
     pass
@@ -36,18 +36,16 @@ def step_impl(context):
     assert context.failed is False
     assert context.tests_count >= 0
 
-"""
-@given({number:d} computer components)
+@given('{number:d} computer components')
 def step_impl(context, number):
     pass
 
 @when('I spend {number:d} minutes matching computer components')
-def step_impl(context, text):
+def step_impl(context, number):
     assert number >= 180
-    context.tests_count = text
+    context.tests_count = number
 
 @then('I will have my new computer')
 def step_impl(context):
     assert context.failed is False
     assert context.tests_count >= 0
-"""
