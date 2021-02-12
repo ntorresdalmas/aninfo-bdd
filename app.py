@@ -17,18 +17,15 @@ def getProjects():
     return proj_list
 
 @app.route('/<project_id>/tickets', methods=['GET'])
-def getTickets():
+def getTickets(project_id):
     """
     only shows the ones with state != resuelto
-    :return:
     """
-    project_id = ''
     ticket_list = list()
     return ticket_list
 
 @app.route('/<project_id>/createTicket', methods=['POST'])
-def createTicket():
-    project_id = ''
+def createTicket(project_id):
     client_id = ''  #???esto entra al final???
     task_id = ''    #???
     resource_id = ''    #???
@@ -48,8 +45,7 @@ def createTicket():
     return body
 
 @app.route('/<project_id>/editTicket', methods=['POST'])
-def editTicket():
-    project_id = ''
+def editTicket(project_id):
     client_id = ''  #???esto entra al final???
     task_id = ''    #???
     resource_id = ''    #???
